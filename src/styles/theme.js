@@ -6,7 +6,7 @@ export default {
     BACKGROUND_600: "hsla(200, 100%, 5%, 1)",
 
     WHITE: "#FFFFFF",
-    WHITE_100: "#E1E1E6",
+    WHITE_100: "#E1E1E6", // XXX mudar o nome XXX
     
     BLUE: "#0099ff",
     BLUE_100: "#82F3FF",
