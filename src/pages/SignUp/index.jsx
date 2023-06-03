@@ -19,10 +19,6 @@ export function SignUp() {
 
   const navigate = useNavigate();
 
-  function handleBack() {
-    navigate("/");
-  }
-
   function handleSignUp(){
     if (!name || !email || !password) {
       return alert("Preencha todos os campos!");
@@ -81,7 +77,7 @@ export function SignUp() {
 
             <Button title={loading ? "Cadastrando" : "Criar conta"} onClick={handleSignUp} disabled={loading}/>
 
-            <Link onClick={handleBack}>
+            <Link to="/">
               Já tenho uma conta
             </Link>
 
