@@ -40,31 +40,17 @@ export function SignIn() {
 
             <div className="inputs">
               <p>Email</p>
-              <Input
-                placeholder="Exemplo: exemplo@exemplo.com.br"
-                type="text"
-                onChange={e => setEmail(e.target.value)}
-              />
+              <Input placeholder="exemplo@email.com" type="text" onChange={e => setEmail(e.target.value)} />
             </div>
             
             <div className="inputs">
               <p>Senha</p>
-              <Input
-                placeholder="No mínimo 6 caracteres"
-                type="password"
-                onChange={e => setPassword(e.target.value)}
-              />
+              <Input placeholder="Mínimo 6 caracteres" type="password" onChange={e => setPassword(e.target.value)} />
             </div>
 
-            <Button 
-              title={loading ? "Entrando" : "Entrar"}
-              onClick={handleSignIn} 
-              disabled={loading}
-            />
+            <Button title={loading ? "Entrando" : "Entrar"} onClick={handleSignIn} disabled={loading} />
 
-            <Link to="/register">
-              Criar conta
-            </Link>
+            <Link to="/register">Criar uma conta</Link>
 
           </Form>
         </Container>

@@ -8,7 +8,7 @@ export default {
     WHITE: "#FFFFFF",
     WHITE_100: "#E1E1E6", // XXX mudar o nome XXX
     
-    BLUE: "#0099ff",
+    RED_BUTTON: "#750310",
     BLUE_100: "#82F3FF",
     BLUE_200: "#001119",
     BLUE_300: "#192227",

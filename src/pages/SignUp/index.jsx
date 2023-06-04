@@ -62,17 +62,17 @@ export function SignUp() {
 
             <div className="inputs">
               <p>Seu nome</p>
-              <Input placeholder="Exemplo: Maria da Silva" type="text" onChange={e => setName(e.target.value)} />
+              <Input placeholder="Seu Nome Aqui" type="text" onChange={e => setName(e.target.value)} />
             </div>
 
             <div className="inputs">
               <p>Email</p>
-              <Input placeholder="Exemplo: exemplo@exemplo.com.br" type="text" onChange={e => setEmail(e.target.value)} />
+              <Input placeholder="exemplo@email.com" type="text" onChange={e => setEmail(e.target.value)} />
             </div>
             
             <div className="inputs">
               <p>Senha</p>
-              <Input placeholder="No mínimo 6 caracteres" type="password" onChange={e => setPassword(e.target.value)} />
+              <Input placeholder="Mínimo 6 caracteres" type="password" onChange={e => setPassword(e.target.value)} />
             </div>
 
             <Button title={loading ? "Cadastrando" : "Criar conta"} onClick={handleSignUp} disabled={loading}/>
