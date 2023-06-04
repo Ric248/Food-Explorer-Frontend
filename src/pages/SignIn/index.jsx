@@ -1,15 +1,15 @@
-import { Container, Form, Logo } from "./styles";
+import { Container, Form, Logo } from './styles';
 
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../../styles/global'
 import darkTheme from '../../styles/theme';
 
-import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
+import { Input } from '../../components/Input';
+import { Button } from '../../components/Button';
 
-import { useAuth } from "../../hooks/auth";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useAuth } from '../../hooks/auth';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export function SignIn() {
   const [email, setEmail] = useState("");
