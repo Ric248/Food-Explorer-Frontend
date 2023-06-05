@@ -17,6 +17,8 @@ export function SignIn() {
   
   const { signIn, loading } = useAuth();
   
+  const onFormSubmit = e => { e.preventDefault() }
+  
   function handleSignIn() {
     signIn({ email, password });
   }
@@ -35,7 +37,7 @@ export function SignIn() {
             </div>
           </Logo>
           
-          <Form>
+          <Form onSubmit={onFormSubmit}>
             <h2>Faça login</h2>
 
             <div className="inputs">
@@ -48,11 +50,11 @@ export function SignIn() {
               <Input placeholder="Mínimo 6 caracteres" type="password" onChange={e => setPassword(e.target.value)} />
             </div>
 
-            <Button title={loading ? "Entrando" : "Entrar"} onClick={handleSignIn} disabled={loading} />
+            <Button  type="submit" title={loading ? "Entrando" : "Entrar"} onClick={handleSignIn} disabled={loading} />
 
             <Link to="/register">Criar uma conta</Link>
-
           </Form>
+          
         </Container>
     </ThemeProvider>
   );

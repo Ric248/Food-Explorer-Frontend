@@ -8,7 +8,7 @@ export default {
         WHITE: "#000000", /*É a cor do texto preto puro*/
         WHITE_100: "#010106", /*É a cor do texto dos Títulos*/
         
-        BLUE: "#0099ff", /*É a cor do logo e dos textos azuis*/
+        RED_BUTTON: "#750310",
         BLUE_100: "#82F3FF", /*É a cor dos preços nos produtos*/
         BLUE_200: "#C4C4CC", /*É a cor de fundo do form de login*/
         BLUE_300: "rgba(255, 255, 255, 0.5)", /*É a cor das bordas das tabelas*/

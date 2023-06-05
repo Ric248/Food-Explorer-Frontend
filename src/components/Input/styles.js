@@ -18,19 +18,18 @@ export const Container = styled.div`
     border: none;
     border-radius: 0.5rem;
 
-    color: ${({ theme }) => theme.COLORS.GRAY_200};
+    color: ${({ theme }) => theme.COLORS.WHITE_100};
     background: transparent;
-
-    &:placeholder {
-      color: ${({ theme }) => theme.COLORS.GRAY_200};
-    }
   }
 
   input:focus {
-    -webkit-box-shadow: 0px 0px 10px 5px #193746; 
-    box-shadow: 0px 0px 10px 5px #193746;
+    border: 1px solid ${({ theme }) => theme.COLORS.GRAY_200};
   }
   
+  input::placeholder {
+    color: ${({ theme }) => theme.COLORS.GRAY_200};
+  }
+
   > svg {
     margin-left: 1.4rem;
   }

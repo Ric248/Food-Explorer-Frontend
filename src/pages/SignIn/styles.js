@@ -47,8 +47,6 @@ export const Form = styled.form`
   border-radius: 1.6rem;
 
   background-color: ${({ theme }) => theme.COLORS.BLUE_200};
-  -webkit-box-shadow: 0px 0px 10px 5px #193746; 
-  box-shadow: 0px 0px 10px 5px #193746;
 
   > h2 {
     font-family: 'Poppins', sans-serif;

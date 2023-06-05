@@ -19,6 +19,8 @@ export function SignUp() {
 
   const navigate = useNavigate();
 
+  const onFormSubmit = e => { e.preventDefault() }
+
   function handleSignUp(){
     if (!name || !email || !password) {
       return alert("Preencha todos os campos!");
@@ -57,7 +59,7 @@ export function SignUp() {
             </div>
           </Logo>
 
-          <Form>
+          <Form onSubmit={onFormSubmit}>
             <h2>Crie sua conta</h2>
 
             <div className="inputs">
@@ -75,13 +77,11 @@ export function SignUp() {
               <Input placeholder="Mínimo 6 caracteres" type="password" onChange={e => setPassword(e.target.value)} />
             </div>
 
-            <Button title={loading ? "Cadastrando" : "Criar conta"} onClick={handleSignUp} disabled={loading}/>
+            <Button  type="submit" title={loading ? "Cadastrando" : "Criar conta"} onClick={handleSignUp} disabled={loading}/>
 
-            <Link to="/">
-              Já tenho uma conta
-            </Link>
-
+            <Link to="/">Já tenho uma conta</Link>
           </Form>
+
         </Container>
     </ThemeProvider>
   );
