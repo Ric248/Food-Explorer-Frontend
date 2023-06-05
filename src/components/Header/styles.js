@@ -192,6 +192,10 @@ export const Search = styled.div`
     color: ${({ theme }) => theme.COLORS.GRAY_200};
   }
 
+  input:focus{
+    border: 1px solid ${({ theme }) => theme.COLORS.GRAY_200};
+  }
+
   label {
     position: relative;
     display: flex;

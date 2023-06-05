@@ -6,7 +6,7 @@ export const Container = styled.textarea`
     padding: 1.4rem;
 
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     resize: none;
     
     color: ${({ theme }) => theme.COLORS.WHITE};
@@ -14,5 +14,9 @@ export const Container = styled.textarea`
 
     &::placeholder {
         color: ${({ theme }) => theme.COLORS.GRAY_200};
+    }
+
+    &:focus {
+        border: 1px solid ${({ theme }) => theme.COLORS.GRAY_200};
     }
 `;

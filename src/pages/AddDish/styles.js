@@ -45,6 +45,7 @@ export const Form = styled.form`
   flex-direction: column;
 
   gap: 3.2rem;
+  color: ${({ theme }) => theme.COLORS.WHITE_100};
 
   h1 {
     font-family: 'Poppins', sans-serif;
@@ -79,10 +80,14 @@ export const Form = styled.form`
     width: 50%;
   }
 
+  .dishCategory {
+    width: 100%;
+  }
+
   .dishCategory select {
   background: ${({ theme }) => theme.COLORS.BLUE_300};
 
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   border: none;
 
   height: 4.8rem;
@@ -114,7 +119,7 @@ export const Form = styled.form`
 
       padding: 1.1rem 0.5rem;
       gap: 0.5rem;
-      border-radius: 0.5rem;
+      border-radius: 0.8rem;
 
       background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
@@ -145,7 +150,12 @@ export const Form = styled.form`
     border: 1px solid white;
   }
 
-  .ingredientsTag { 
+  .ingredients_line {
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+
+  .details_plus { 
     justify-content: space-between;
   }
 
@@ -188,7 +198,7 @@ export const Form = styled.form`
       border-radius: 0.8rem;
     }
 
-    .ingredientsTag {
+    .details_plus {
       display: flex;
       justify-content: space-between;
 

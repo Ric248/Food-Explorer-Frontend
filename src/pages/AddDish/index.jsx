@@ -171,8 +171,8 @@ export function AddDish( ) {
                     </div>
                   </div>
 
-                  <div className="ingredientsTag">
-                    <div>
+                  <div className="details_plus">
+                    <div className="ingredients_line">
                       <p>Ingredientes</p>
                       <div className="ingredients">
                         {
