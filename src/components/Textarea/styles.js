@@ -5,9 +5,8 @@ export const Container = styled.textarea`
     height: 17.2rem;
     padding: 1.4rem;
 
+    border: none;
     border-radius: 0.5rem;
-    border: 1px solid ${({ theme }) => theme.COLORS.WHITE}; 
-    
     resize: none;
     
     color: ${({ theme }) => theme.COLORS.WHITE};
@@ -15,10 +14,5 @@ export const Container = styled.textarea`
 
     &::placeholder {
         color: ${({ theme }) => theme.COLORS.GRAY_200};
-    }
-
-    &:focus {
-        -webkit-box-shadow: 0px 0px 10px 5px #193746; 
-        box-shadow: 0px 0px 10px 5px #193746;
     }
 `;

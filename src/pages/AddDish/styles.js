@@ -84,7 +84,6 @@ export const Form = styled.form`
 
   border-radius: 0.5rem;
   border: none;
-  border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
 
   height: 4.8rem;
   width: 100%;
@@ -116,7 +115,6 @@ export const Form = styled.form`
       padding: 1.1rem 0.5rem;
       gap: 0.5rem;
       border-radius: 0.5rem;
-      border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
 
       background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
@@ -137,7 +135,7 @@ export const Form = styled.form`
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    
+
     height: auto;
     gap: 2.4rem;
     padding: 0.8rem;
@@ -179,20 +177,22 @@ export const Form = styled.form`
       display: flex;
       flex-wrap: wrap;
       align-content: center;
-      
-      width: 100%;
+
       max-width: 83.7rem;
       height: auto;
       padding: 0.8rem;
       margin-bottom: 0;
 
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+      border: none;
       border-radius: 0.8rem;
-      border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
     }
 
-    .ingredientsTag { 
+    .ingredientsTag {
       display: flex;
       justify-content: space-between;
+
+      width: 100%;
       gap: 3.2rem;
     }
 
