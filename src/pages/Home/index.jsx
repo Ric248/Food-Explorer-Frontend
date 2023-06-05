@@ -15,7 +15,7 @@ import { api } from '../../services/api';
 import { useState, useEffect } from 'react';
 import { useFavorites } from '../../hooks/favorites';
 
-import background from "../../assets/Mask group.png"
+import background from "../../assets/banner.png"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
