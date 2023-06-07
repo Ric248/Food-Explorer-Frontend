@@ -89,6 +89,7 @@ export function AddDish( ) {
     setLoading(true);
 
     const formData = new FormData();
+
     formData.append("image", image);
     formData.append("title", title);
     formData.append("description", description);
@@ -100,7 +101,7 @@ export function AddDish( ) {
     ))
 
     await api
-      .post("/dishes", formData)
+      .post("/adminDishes", formData)
       .then(alert("Prato adicionado com sucesso!"), navigate("/"))
       .catch((error) => {
         if (error.response) {
