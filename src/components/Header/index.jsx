@@ -76,8 +76,8 @@ export function Header({search, favoritesFilter}) {
               ): (
                 <Link to="/cart">
                   <Button type='button'>
-                    <BsReceipt size={24}/>
-                    Carrinho <span>({cart.length})</span>
+                    <img src="src/assets/Icons/Receipt.svg"/>
+                    Pedidos <span>({cart.length})</span>
                   </Button>
                 </Link>
               )

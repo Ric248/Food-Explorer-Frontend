@@ -1,4 +1,4 @@
-import { Container, Content, PurchaseCard } from './styles.js'
+import { Container, Content, PurchaseCard } from './styles.js';
 
 import { Button } from '../Button';
 import { ButtonText } from "../ButtonText";
@@ -96,7 +96,6 @@ export function Card({ data, ...rest }) {
 
                 <Button 
                   title="incluir"
-                  icon={BsReceipt}
                   onClick={() => handleAddDishToCart(data, quantity, imageURL)}
                   style={ { height: 56, width: 92, padding: '12px 4px' } }
                 />

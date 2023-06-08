@@ -66,7 +66,7 @@ export const Content = styled.div`
         font-family: 'Roboto', sans-serif;
         font-size: 3.2rem;
         font-weight: 400;
-        color: ${({ theme }) => theme.COLORS.BLUE};
+        color: ${({ theme }) => theme.COLORS.BLUE_100};
 
         margin-bottom: 1.6rem;
     }
