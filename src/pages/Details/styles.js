@@ -93,13 +93,7 @@ export const Content = styled.div`
   img {
     width: 45rem;
     height: 45rem;
-  }
-
-  h4 {
-    font-size: 3.2rem;
-    font-weight: 400;
-    line-height: 5.12rem;
-    color: ${({theme})=> theme.COLORS.VALUE_TEXT}
+    border-radius: 50%;
   }
 
   .details{
@@ -133,22 +127,24 @@ export const Content = styled.div`
   }
   
   .Amount {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+
+    .PlusItem, .MinusItem{
       display: flex;
       align-items: center;
-      gap: 2rem;
+      background: transparent;
+      color: ${({theme})=> theme.COLORS.WHITE};
 
-      .PlusItem,
-      .MinusItem{
-        display: flex;
-        align-items: center;
-        background: transparent;
-        color: ${({theme})=> theme.COLORS.WHITE};
-
-        > svg {
-        width: 1.8rem;
-        height: 1.8rem;
+      > svg {
+      width: 2.4rem;
+      height: 2.4rem;
       }
-
+    }
+    
+    > button {
+    border: none;
     }
   }
 
@@ -173,11 +169,7 @@ export const Content = styled.div`
     img {
       width: 25rem;
       height: 25rem;
-    }
-
-    h4 {
-      font-size: 1.8rem;
-      line-height: 2rem;
+      border-radius: 50%;
     }
 
     .details{
@@ -188,20 +180,22 @@ export const Content = styled.div`
 
     .details-wrapper{
       gap: 0.6rem;
+      font-family: 'Poppins', sans-serif;
+      color: ${({theme})=> theme.COLORS.WHITE_100};
 
       > h2 {
-        font-size: 3.2rem;
-        line-height: 4rem;
+        font-weight: 500;
+        font-size: 4rem;
       }
 
       > p {
-        font-size: 2rem;
-        line-height: 3rem;
+        font-weight: 400;
+        font-size: 2.4rem;
       }
     }
     
     .AmountItemsAndBuy-wrapper {
-    gap: 2rem;
+      gap: 2rem;
 
     span {
       font-size: 1.8rem;
@@ -210,18 +204,13 @@ export const Content = styled.div`
     }
 
     .Amount{
-      gap: 2rem;
+      gap: 1.4rem;
     }
   }
 
   @media (max-width: 425px){
     min-height: 38.8rem;
     flex-direction: column;
-
-    h4 {
-      font-size: 2rem;
-      line-height: 1.8rem;
-    }
 
     .details{
       gap: 1rem;
@@ -255,7 +244,7 @@ export const Content = styled.div`
     }
 
     .Amount{
-      gap: 2rem;
+      gap: 1.4rem;
     }
   }
 `;

@@ -21,7 +21,7 @@ export function Details(){
   const navigate = useNavigate()
   const { user } = useAuth()
 
-  const imageURL = data && `${api.defaults.baseURL}/files/dishFiles/${data.image}`
+  const imageURL = data && `${api.defaults.baseURL}/files/${data.image}`;
 
   function handleAddItem() {
     setQuantity (quantity+1)
@@ -88,11 +88,16 @@ export function Details(){
         </AllIngredientCards>
 
         <div className='AmountItemsAndBuy-wrapper'>
-
-          <h4>R$ {data.price}</h4>
-
           {
-          !user.isAdmin ?
+          user.isAdmin ?
+
+          <div className='Amount'>
+            <Button title="Deletar" onClick={handleDeleteDish} />
+            <Button title="Editar" onClick={handleGoToEditPage} />
+          </div>
+
+          :
+
           <div className='Amount'>
             <button className='MinusItem' onClick={handleRemoveItem}>
               <BiMinus />
@@ -104,14 +109,7 @@ export function Details(){
               <BiPlus />
             </button>
 
-            <Button title="incluir"/>
-          </div>
-
-          :
-
-          <div className='Amount'>
-            <Button title="Deletar" onClick={handleDeleteDish} />
-            <Button title="Editar" onClick={handleGoToEditPage} />
+            <Button title={`incluir ∙ R$ ${data.price}`}/>
           </div>
           }
 
