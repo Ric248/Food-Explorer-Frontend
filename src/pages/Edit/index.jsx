@@ -1,4 +1,4 @@
-import { Container, Content, Form, Image } from "./styles.js";
+import { Container, Content, Form } from "./styles.js";
 
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
@@ -17,7 +17,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import { RiArrowLeftSLine } from 'react-icons/ri';
-import { FiCamera } from "react-icons/fi";
+import { FiUpload } from "react-icons/fi";
 
 export function Edit() {
   const navigate = useNavigate();
@@ -157,7 +157,7 @@ export function Edit() {
             <Form>
               <header>
                 <Link to="/">
-                  <ButtonText title="Voltar" icon={RiArrowLeftSLine}/>
+                  <ButtonText title="voltar" icon={RiArrowLeftSLine}/>
                 </Link>
                 <h1>Editar prato</h1>
               </header>
@@ -165,25 +165,17 @@ export function Edit() {
               <div className="details">
                 <div className="dishImage">
                   <p>Imagem do Prato</p>
-
-                  <Image>
-                    <img 
-                      src={image ? image : imageURL} 
-                      alt="Foto do prato" 
-                    />
-
                     <label htmlFor="image">
-                      <FiCamera />
-
-                      <input
-                        id="image"
-                        type="file"
-                        name="image"
-                        accept="image/*"
-                        onChange={handleChangeImage}
-                      />
+                      <FiUpload size={24}/> 
+                      Selecione imagem 
                     </label>
-                  </Image>
+                    <Input 
+                      type="file"
+                      id="image" 
+                      name="image"
+                      accept="image/*" 
+                      onChange={e => setImage(e.target.files[0])}
+                    />
                 </div>
 
                 <div className="dishDetails">
