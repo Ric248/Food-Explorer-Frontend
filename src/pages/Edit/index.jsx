@@ -134,19 +134,12 @@ export function Edit() {
     fetchDish();
   }, [])
 
-  async function handleRemoveDish() {
-    setLoadingDelete(true);
-    const isConfirm = confirm("Tem certeza que deseja remover este item?");
-  
-    if(isConfirm) {
-      await api.delete(`/dishes/${params.id}`)
-      .then(() => {
-        alert("Item removido com sucesso!");
-        navigate("/");
-        setLoadingDelete(false);
-      })
-    } else {
-      return
+  async function handleDeleteDish(){
+    const confirm = window.confirm("Deseja realmente deletar o prato do cardápio?")
+
+    if(confirm){
+      await api.delete(`/adminDishes/${data.id}`)
+      navigate(-1)
     }
   }
     
@@ -272,7 +265,7 @@ export function Edit() {
             <Button 
               className="deleteButton"
               title={loadingDelete ? "Excluindo prato" : "Excluir prato"}
-              onClick={handleRemoveDish}
+              onClick={handleDeleteDish}
               disabled={loadingDelete} 
             />
             <Button 

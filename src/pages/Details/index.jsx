@@ -34,15 +34,6 @@ export function Details(){
     }
   }
 
-  async function handleDeleteDish(){
-    const confirm = window.confirm("Deseja realmente deletar o prato do cardápio?")
-
-    if(confirm){
-      await api.delete(`/adminDishes/${data.id}`)
-      navigate(-1)
-    }
-  }
-
   function handleGoToEditPage(){
     navigate(`/edit/${data.id}`)
   }
@@ -92,8 +83,7 @@ export function Details(){
           user.isAdmin ?
 
           <div className='Amount'>
-            <Button title="Deletar" onClick={handleDeleteDish} />
-            <Button title="Editar" onClick={handleGoToEditPage} />
+            <Button title="Editar prato" onClick={handleGoToEditPage} />
           </div>
 
           :

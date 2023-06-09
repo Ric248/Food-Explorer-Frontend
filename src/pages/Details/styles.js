@@ -112,6 +112,7 @@ export const Content = styled.div`
 
     > h2 {
       font-size: 4rem;
+      font-family: 'Poppins', sans-serif;
       color: ${({theme}) => theme.COLORS.GRAY};
       font-weight: 500;
       line-height: 5.6rem;
@@ -158,7 +159,7 @@ export const Content = styled.div`
       font-size: 2rem;
       line-height: 3.2rem;
       color: ${({theme})=> theme.COLORS.GRAY};
-  }
+    }
   }
 
   @media (max-width: 768px){
