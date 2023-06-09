@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 import { api } from '../../services/api';
 import { useState } from "react";
 
-import { BsReceipt } from 'react-icons/bs';
 import { FiMinus, FiPlus } from 'react-icons/fi';
-import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+
 import imagePlaceholder from '../../assets/image-not-found-icon.svg';
 
 export function Card({ data, ...rest }) {
@@ -49,6 +49,12 @@ export function Card({ data, ...rest }) {
         user.isAdmin ?
 
           <Content>
+            <button className="editButton">
+              <Link to={`/edit/${data.id}`}>
+                  <img src="src/assets/Icons/Pencil.svg" alt="Símbolo de editar" />
+              </Link>
+            </button>
+
             <div className="container">
               <img src={imageURL} alt="Imagem do prato" />
               <Link to={`/details/${data.id}`}>
@@ -56,27 +62,14 @@ export function Card({ data, ...rest }) {
               </Link>
               <p className="description">{data.description}</p>
               <h1 className="price">R$ {data.price}</h1>
-              <Link to={`/edit/${data.id}`}>
-                <Button
-                  title="editar prato"
-                  icon={BsReceipt}
-                />
-              </Link>
             </div>
           </Content>
 
         :
 
           <Content>
-            <button 
-              className="favButton"
-              onClick={() => isFavorite ? removeDishFromFavorite(data) : addDishToFavorite(data)}
-              >
-                {isFavorite ?
-                  <AiFillHeart />
-                :
-                  <AiOutlineHeart />
-                }
+            <button className="favButton" onClick={() => isFavorite ? removeDishFromFavorite(data) : addDishToFavorite(data)}>
+              {isFavorite ? <AiFillHeart /> : <AiOutlineHeart />}
             </button>
 
             <div className="container">

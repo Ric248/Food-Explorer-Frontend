@@ -4,7 +4,6 @@ import { useAuth } from '../../hooks/auth';
 import { Link } from "react-router-dom";
 
 import { FiSearch, FiLogOut } from 'react-icons/fi';
-import { BsReceipt } from 'react-icons/bs';
 
 import logo from '../../assets/logo.svg';
 

@@ -12,10 +12,9 @@ import background from "../../assets/banner.png"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
-import "swiper/css/navigation";
-
-import { Navigation } from "swiper";
+import "swiper/css"; // XXX Mexer nisso? XXX
+import "swiper/css/navigation"; // XXX Mexer nisso? XXX
+import { Navigation } from "swiper"; // XXX Mexer nisso? XXX
 
 export function Home() {
   const [dishes, setDishes] = useState([])
