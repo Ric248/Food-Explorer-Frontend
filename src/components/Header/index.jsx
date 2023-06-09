@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { FiSearch, FiLogOut } from 'react-icons/fi';
 
 import logo from '../../assets/logo.svg';
+import receipt from '../../assets/Icons/Receipt.svg';
 
 import { useCart } from '../../hooks/cart';
 
@@ -75,7 +76,7 @@ export function Header({search, favoritesFilter}) {
               ): (
                 <Link to="/cart">
                   <Button type='button'>
-                    <img src="src/assets/Icons/Receipt.svg"/>
+                    <img src={receipt} />
                     Pedidos <span>({cart.length})</span>
                   </Button>
                 </Link>

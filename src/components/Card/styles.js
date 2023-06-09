@@ -7,8 +7,12 @@ export const Container = styled.div`
 export const Content = styled.div`
   position: relative;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 30rem;
-  height: 51.2rem;
+  height: 46rem;
   border-radius: 0.8rem;
   border: 1px solid rgba(0, 0, 0, 0.65);
   
@@ -16,8 +20,8 @@ export const Content = styled.div`
 
   .editButton {
     position: absolute;
-    top: 1.2rem;
-    right: 1.2rem;
+    top: 1.6rem;
+    right: 1.8rem;
     background: transparent;
     border: none;
     font-size: 3rem;
@@ -29,8 +33,8 @@ export const Content = styled.div`
 
   .favButton {
     position: absolute;
-    top: 1.2rem;
-    right: 1.2rem;
+    top: 1.6rem;
+    right: 1.8rem;
     background: transparent;
     border: none;
     font-size: 3rem;
@@ -42,7 +46,6 @@ export const Content = styled.div`
 
   .container {
     display: grid;
-    padding: 3.8rem 2.6rem;
     text-align: center;
     align-items: center;
 
@@ -60,7 +63,7 @@ export const Content = styled.div`
     font-size: 2.4rem;
     color: ${({ theme }) => theme.COLORS.WHITE};
     
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.5rem;
     white-space: nowrap;
   }
   
@@ -70,8 +73,7 @@ export const Content = styled.div`
     font-weight: 400;
     color: ${({ theme }) => theme.COLORS.GRAY_100};
 
-    margin-bottom: 1.6rem;
-    height: 3.4rem;
+    margin-bottom: 1.5rem;
   }
 
   .price {
@@ -80,7 +82,7 @@ export const Content = styled.div`
     font-weight: 400;
     color: ${({ theme }) => theme.COLORS.BLUE_100};
 
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.5rem;
   }
 `;
 

@@ -22,7 +22,7 @@ export function Details(){
   const { user } = useAuth()
 
   const imageURL = data && `${api.defaults.baseURL}/files/dishFiles/${data.image}`
-  
+
   function handleAddItem() {
     setQuantity (quantity+1)
   }
@@ -36,7 +36,7 @@ export function Details(){
 
   async function handleDeleteDish(){
     const confirm = window.confirm("Deseja realmente deletar o prato do cardápio?")
-  
+
     if(confirm){
       await api.delete(`/adminDishes/${data.id}`)
       navigate(-1)
@@ -70,8 +70,7 @@ export function Details(){
             Voltar
           </Link>
       </ButtonBack>
-      
-      
+
       <Content>
       <img src={imageURL} alt="Imagem do prato" />
 
@@ -83,9 +82,9 @@ export function Details(){
       
 
         <AllIngredientCards>
-        {
-        data.ingredients.map ((ingredient) => (<IngredientCard key={String(ingredient.id)} ingredient={ingredient.name} />))
-        }
+          {
+          data.ingredients.map ((ingredient) => (<IngredientCard key={String(ingredient.id)} ingredient={ingredient.name} />))
+          }
         </AllIngredientCards>
 
         <div className='AmountItemsAndBuy-wrapper'>
