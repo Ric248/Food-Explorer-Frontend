@@ -85,10 +85,10 @@ export function AddDish( ) {
     formData.append("description", description);
     formData.append("category", category);
     formData.append("price", price);
+    formData.append("ingredientString", ingredients);
 
-    ingredients.map(ingredient => (
-      formData.append("ingredients", ingredient)
-    ))
+    console.log(ingredients);
+    console.log(formData);
 
     await api
       .post("/adminDishes", formData)
@@ -204,7 +204,7 @@ export function AddDish( ) {
             <div className="button">
               <Button 
                 title={loading ? "Salvando alterações" : "Salvar alterações"}
-                onClick={handleNewDish} 
+                onClick={handleNewDish}
                 disabled={loading}
               />
             </div>

@@ -58,7 +58,7 @@ export function Details(){
       <ButtonBack>
           <Link to ='/'>
             <IoIosArrowBack size={32} />
-            Voltar
+            voltar
           </Link>
       </ButtonBack>
 
