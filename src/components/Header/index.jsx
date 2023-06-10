@@ -68,7 +68,7 @@ export function Header({search, favoritesFilter}) {
           {
             user.isAdmin ?
               (
-                <Link to="/addDish">
+                <Link to="/add">
                   <Button type='button'>
                     Novo Prato
                   </Button>

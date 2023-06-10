@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 import { RiArrowLeftSLine } from 'react-icons/ri';
 import { FiUpload } from "react-icons/fi";
 
-export function AddDish( ) {
+export function Add( ) {
   const { user } = useAuth()
   
   const [loading, setLoading] = useState(false);
@@ -150,7 +150,7 @@ export function AddDish( ) {
 
                   <select defaultValue={'default'} onChange={e => setCategory(e.target.value)}>
                     <option value="default" disabled>Selecione uma categoria</option>
-                    <option value="dishes">Pratos</option>
+                    <option value="dishes">Refeição</option>
                     <option value="drinks">Bebidas</option>
                     <option value="dessert">Sobremesas</option>
                   </select> 
