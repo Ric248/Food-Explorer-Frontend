@@ -7,6 +7,7 @@ export default {
 
     WHITE: "#FFFFFF",
     WHITE_100: "#E1E1E6", // XXX mudar o nome XXX
+    WHITE_200: "#76797B",
     
     RED_BUTTON: "#750310",
     BLUE_100: "#82F3FF",

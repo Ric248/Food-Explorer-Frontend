@@ -85,22 +85,18 @@ export const Form = styled.form`
   }
 
   .dishCategory select {
-  background: ${({ theme }) => theme.COLORS.BLUE_300};
+  background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
   border-radius: 0.8rem;
   border: none;
 
   height: 4.8rem;
   width: 100%;
-
   padding: 12px;
 
   font-size: 16px;
-
   line-height: 26px;
-
   color: ${({ theme }) => theme.COLORS.GRAY_100};
-
   }
 
   .dishImage {
