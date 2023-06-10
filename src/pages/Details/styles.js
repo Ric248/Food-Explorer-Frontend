@@ -90,19 +90,37 @@ export const Content = styled.div`
 
   position: relative;
 
+  color: ${({theme}) => theme.COLORS.WHITE_100};
+
   img {
-    width: 45rem;
-    height: 45rem;
+    width: 39rem;
+    height: 39rem;
     border-radius: 50%;
+  }
+
+  .ingredientsTags {
+    display: flex;
+    gap: 1.2rem;
+
+    > .tag {
+      border-radius: 5px;
+      padding: 0.4rem 0.8rem;
+
+      font-size: 1.4rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      color: ${({theme}) => theme.COLORS.WHITE};
+
+      background-color: ${({theme})=> theme.COLORS.BLUE_300};
+    }
   }
 
   .details{
     display: flex;
     flex-direction: column;   
-    gap: 3rem;
+    gap: 2.4rem;
     width: 60.3rem;
     height: 35.6rem;
-
   }
 
   .details-wrapper{
@@ -113,14 +131,13 @@ export const Content = styled.div`
     > h2 {
       font-size: 4rem;
       font-family: 'Poppins', sans-serif;
-      color: ${({theme}) => theme.COLORS.GRAY};
       font-weight: 500;
-      line-height: 5.6rem;
+
+      margin-bottom: 1.2rem;
     }
 
     > p {
       font-size: 2.4rem;
-      color: ${({theme}) => theme.COLORS.GRAY};
       font-family: 'Poppins', sans-serif;
       font-weight: 400;
       line-height: 3.4rem;
@@ -145,6 +162,7 @@ export const Content = styled.div`
     }
     
     > button {
+    margin-top: 2.4rem;
     border: none;
     }
   }

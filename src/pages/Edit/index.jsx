@@ -195,9 +195,9 @@ export function Edit() {
 
                       <select value={category} onChange={e => setCategory(e.target.value)}>
                         <option value="default" disabled>Selecione a categoria</option>
-                        <option value="dishes">Pratos</option>
-                        <option value="drinks">Bebidas</option>
-                        <option value="dessert">Sobremesas</option>
+                        <option value="dishes">Refeição</option>
+                        <option value="drinks">Bebida</option>
+                        <option value="dessert">Sobremesa</option>
                       </select> 
                     </div>
                   </div>

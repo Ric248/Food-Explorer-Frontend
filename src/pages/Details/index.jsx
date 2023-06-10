@@ -1,9 +1,8 @@
-import { Container, Main, ButtonBack, AllIngredientCards, Content } from './styles';
+import { Container, Main, ButtonBack, Content } from './styles';
 
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import { Button } from '../../components/Button'
-import { IngredientCard } from '../../components/IngredientCard'
 
 import { IoIosArrowBack } from 'react-icons/io'
 import { BiMinus, BiPlus } from 'react-icons/bi'
@@ -70,13 +69,12 @@ export function Details(){
           <h2>{data.title}</h2>
           <p>{data.description}</p>
         </div>
-      
 
-        <AllIngredientCards>
+        <div className="ingredientsTags">
           {
-          data.ingredients.map ((ingredient) => (<IngredientCard key={String(ingredient.id)} ingredient={ingredient.name} />))
+          data.ingredients.map ((ingredient) => (<div className="tag">{ingredient.name}</div>))
           }
-        </AllIngredientCards>
+        </div>
 
         <div className='AmountItemsAndBuy-wrapper'>
           {

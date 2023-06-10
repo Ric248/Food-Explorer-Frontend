@@ -53,7 +53,7 @@ export function Home() {
           </Banner>
 
           <div className="cards">   
-            <p>Pratos principais</p>
+            <p>Refeições</p>
 
             {
               dishes.filter(dish => dish.category == "dishes").length > 0 &&
