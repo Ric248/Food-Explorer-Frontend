@@ -143,10 +143,17 @@ export const Form = styled.form`
     gap: 3rem;
   }
 
-  .dishIngredients {
+  .ingredients_line {
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+
+  .details_plus { 
     display: flex;
-    gap: 3rem;
     justify-content: space-between;
+
+    width: 100%;
+    gap: 3.2rem;
   }
 
   .dishDetails {
@@ -254,16 +261,15 @@ export const Form = styled.form`
       display: flex;
       flex-wrap: wrap;
       align-content: center;
-      
 
       max-width: 83.7rem;
-      width: 100%;
       height: auto;
       padding: 0.8rem;
       margin-bottom: 0;
 
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+      border: none;
       border-radius: 0.8rem;
-      border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
     }
 
     .ingredientsTag { 
@@ -273,6 +279,7 @@ export const Form = styled.form`
     }
 
     .price {
+      max-width: 25.1rem;
       width: 100%;
     }
   }

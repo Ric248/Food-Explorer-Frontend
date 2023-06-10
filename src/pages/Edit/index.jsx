@@ -201,41 +201,37 @@ export function Edit() {
               </div>
 
               <div className="details_plus">
-                <div className="dishIngredients">
-                  <div className="ingredientsTag">
-                    <div>
-                      <p>Ingredientes</p>
-                      <div className="ingredients">
-                        {
-                          ingredients.map((ingredient, index) => (
-                            <IngredientsTag 
-                              key={String(index)} 
-                              value={ingredient} 
-                              onClick={() => handleRemoveIngredient(ingredient) }
-                            />
-                          ))
-                        }
-                        
-                        <IngredientsTag 
-                          isNew 
-                          placeholder="Adicionar" 
-                          onChange={e => setNewIngredient(e.target.value)}
-                          value={newIngredient}
-                          onClick={handleAddIngredient}
+                <div className="ingredients_line">
+                  <p>Ingredientes</p>
+                  <div className="ingredients">
+                    {
+                      ingredients.map((ingredient, index) => (
+                        <IngredientsTag
+                          key={String(index)}
+                          value={ingredient}
+                          onClick={() => handleRemoveIngredient(ingredient)}
                         />
-                      </div>
-                    </div>
-                  </div>
+                      ))
+                    }
 
-                  <div className="price">
-                    <p>Preço</p>
-                    <Input
-                      placeholder="R$ 00,00"
-                      type="number"
-                      value={price} 
-                      onChange={e => setPrice(e.target.value)}
+                    <IngredientsTag 
+                      isNew 
+                      placeholder="Adicionar" 
+                      onChange={e => setNewIngredient(e.target.value)}
+                      value={newIngredient}
+                      onClick={handleAddIngredient}
                     />
                   </div>
+                </div>
+
+                <div className="price">
+                  <p>Preço</p>
+                  <Input
+                    placeholder="R$ 00,00"
+                    type="number"
+                    value={price} 
+                    onChange={e => setPrice(e.target.value)}
+                  />
                 </div>
               </div>
 
