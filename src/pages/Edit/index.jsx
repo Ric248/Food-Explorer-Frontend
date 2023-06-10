@@ -113,8 +113,8 @@ export function Edit() {
         } else {
           alert("Erro ao atualizar o prato!");
         }
-      });  
-    
+      });
+
     setLoading(false);
   }
 
@@ -165,78 +165,76 @@ export function Edit() {
               <div className="details">
                 <div className="dishImage">
                   <p>Imagem do Prato</p>
-                    <label htmlFor="image">
-                      <FiUpload size={24}/> 
-                      Selecione imagem 
-                    </label>
-                    <Input 
-                      type="file"
-                      id="image" 
-                      name="image"
-                      accept="image/*" 
-                      onChange={e => setImage(e.target.files[0])}
-                    />
+                  <label htmlFor="image">
+                    <FiUpload size={24}/> 
+                    Selecione imagem 
+                  </label>
+                  <Input 
+                    type="file"
+                    id="image" 
+                    name="image"
+                    accept="image/*" 
+                    onChange={e => setImage(e.target.files[0])}
+                  />
                 </div>
 
-                <div className="dishDetails">
-                  <div className="dishName">
-                    <div className="dish">
-                      <p>Nome do prato</p>
-                      <Input
-                        placeholder="Ex.: Salada Caesar"
-                        type="text"
-                        value={title}
-                        onChange={e => setTitle(e.target.value)}
-                      />
-                    </div>
+                <div className="dish">
+                  <p>Nome do prato</p>
+                  <Input
+                    placeholder="Ex.: Salada Caesar"
+                    type="text"
+                    value={title}
+                    onChange={e => setTitle(e.target.value)}
+                  />
+                </div>
 
-                    <div className="dishCategory">
-                      <p>Categoria</p>
+                <div className="dishCategory">
+                  <p>Categoria</p>
 
-                      <select value={category} onChange={e => setCategory(e.target.value)}>
-                        <option value="default" disabled>Selecione a categoria</option>
-                        <option value="dishes">Refeição</option>
-                        <option value="drinks">Bebida</option>
-                        <option value="dessert">Sobremesa</option>
-                      </select> 
+                  <select value={category} onChange={e => setCategory(e.target.value)}>
+                    <option value="default" disabled>Selecione uma categoria</option>
+                    <option value="dishes">Refeição</option>
+                    <option value="drinks">Bebida</option>
+                    <option value="dessert">Sobremesa</option>
+                  </select> 
+                </div>
+              </div>
+
+              <div className="details_plus">
+                <div className="dishIngredients">
+                  <div className="ingredientsTag">
+                    <div>
+                      <p>Ingredientes</p>
+                      <div className="ingredients">
+                        {
+                          ingredients.map((ingredient, index) => (
+                            <IngredientsTag 
+                              key={String(index)} 
+                              value={ingredient} 
+                              onClick={() => handleRemoveIngredient(ingredient) }
+                            />
+                          ))
+                        }
+                        
+                        <IngredientsTag 
+                          isNew 
+                          placeholder="Adicionar" 
+                          onChange={e => setNewIngredient(e.target.value)}
+                          value={newIngredient}
+                          onClick={handleAddIngredient}
+                        />
+                      </div>
                     </div>
                   </div>
 
-                  <div className="dishIngredients">
-                    <div className="ingredientsTag">
-                      <div>
-                        <p>Ingredientes</p>
-                        <div className="ingredients">
-                          {
-                            ingredients.map((ingredient, index) => (
-                              <IngredientsTag 
-                                key={String(index)} 
-                                value={ingredient} 
-                                onClick={() => handleRemoveIngredient(ingredient) }
-                              />
-                            ))
-                          }
-                          
-                          <IngredientsTag 
-                            isNew 
-                            placeholder="Adicionar" 
-                            onChange={e => setNewIngredient(e.target.value)}
-                            value={newIngredient}
-                            onClick={handleAddIngredient}
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="price">
-                      <p>Preço</p>
-                      <Input
-                        placeholder="R$ 00,00"
-                        type="number"
-                        value={price} 
-                        onChange={e => setPrice(e.target.value)}
-                      />
-                    </div>
+                  <div className="price">
+                    <p>Preço</p>
+                    <Input
+                      placeholder="R$ 00,00"
+                      type="number"
+                      value={price} 
+                      onChange={e => setPrice(e.target.value)}
+                    />
                   </div>
                 </div>
               </div>

@@ -156,20 +156,21 @@ export const Form = styled.form`
     gap: 5rem;
   }
 
-  .dishCategory select {
-    background: ${({ theme }) => theme.COLORS.BLUE_300};
+  .dishCategory {
+    width: 100%;
+  }
 
-    border-radius: 0.5rem;
+  .dishCategory select {
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+
+    border-radius: 0.8rem;
     border: none;
-    border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
 
     height: 4.8rem;
     width: 100%;
-
     padding: 12px;
-
+    
     font-size: 16px;
-
     line-height: 26px;
 
     color: ${({ theme }) => theme.COLORS.GRAY_100};
@@ -186,25 +187,25 @@ export const Form = styled.form`
     }
     
     > label {
-    display: flex;
-    justify-content: center;
+      display: flex;
+      justify-content: center;
 
-    padding: 1.1rem 0.5rem;
-    gap: 0.5rem;
-    border-radius: 0.8rem;
+      padding: 1.1rem 0.5rem;
+      gap: 0.5rem;
+      border-radius: 0.8rem;
 
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 2.4rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 2.4rem;
 
-    cursor: pointer;
+      cursor: pointer;
     }
 
     > label:hover {
-    background-color: ${({ theme }) => theme.COLORS.BLUE};
+      background-color: ${({ theme }) => theme.COLORS.BLUE};
     }
   }
 
@@ -219,7 +220,6 @@ export const Form = styled.form`
     
     border-radius: 0.8rem;
     margin-bottom: 3.2rem;
-    border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
   }
 
   .ingredientsTag { 

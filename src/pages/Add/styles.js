@@ -96,6 +96,7 @@ export const Form = styled.form`
 
   font-size: 16px;
   line-height: 26px;
+
   color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 
