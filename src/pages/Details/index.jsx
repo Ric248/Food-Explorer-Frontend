@@ -40,7 +40,7 @@ export function Details(){
 
   useEffect(() => {
     async function fetchDish(){
-      const responseAPI = await api.get(`/dishes/${params.id}`)
+      const responseAPI = await api.get(`/adminDishes/${params.id}`)
       setData(responseAPI.data)
     }
 

@@ -87,8 +87,8 @@ export function Add( ) {
     formData.append("price", price);
     formData.append("ingredientString", ingredients);
 
-    console.log(ingredients);
-    console.log(formData);
+    console.log(ingredients); // --------------------------------------------------------------------------------------------------
+    console.log(formData); // ---------------------------------------------------------------------------------------------------
 
     await api
       .post("/adminDishes", formData)

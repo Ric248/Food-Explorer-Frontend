@@ -99,13 +99,13 @@ export function Edit() {
     formData.append("description", description);
     formData.append("category", category);
     formData.append("price", price);
-    
-    ingredients.map(ingredient => (
-      formData.append("ingredients", ingredient)
-    ))
+    formData.append("ingredientString", ingredients);
+
+    console.log(ingredients); // --------------------------------------------------------------------------------------------------
+    console.log(formData); // ---------------------------------------------------------------------------------------------------
 
     await api
-      .put(`/dishes/${params.id}`, formData)
+      .put(`/adminDishes/${params.id}`, formData)
       .then(alert("Prato atualizado com sucesso!"), navigate("/"))
       .catch((error) => {
         if (error.response) {
@@ -120,7 +120,7 @@ export function Edit() {
 
   useEffect(() => {
     async function fetchDish() {
-      const response = await api.get(`/dishes/${params.id}`);
+      const response = await api.get(`/adminDishes/${params.id}`);
       setData(response.data);
       
       const { title, description, category, price, ingredients } = response.data;

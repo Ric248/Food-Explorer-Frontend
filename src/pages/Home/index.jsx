@@ -31,7 +31,7 @@ export function Home() {
 
   useEffect(() => {
     async function fetchDishes() {
-      const response = await api.get(`/dishes?title=${search}`);
+      const response = await api.get(`/adminDishes?title=${search}`);
       setDishes(response.data);
   }
   fetchDishes();
