@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 100vh;  
 
   display: grid;
-  grid-template-rows: 10.4rem auto 7.2rem;
+  grid-template-rows: 9.6rem auto 7.2rem;
   grid-area: 
   "header"
   "main"
@@ -16,12 +16,12 @@ export const Main = styled.main`
   grid-area: "main";
   /* max-width: 136.8rem; */
   margin: 0 auto;
-  width: 136.8rem;
+  width: 138rem;
   
   display: flex;
   flex-direction: column;
   padding: 2.4rem 12.3rem;
-  gap: 8rem;
+  gap: 4.2rem;
 
   @media (max-width: 768px){
     width: 76.8rem;
@@ -53,7 +53,6 @@ export const ButtonBack = styled.div`
     font-size: 2.4rem;
     font-weight: 500;
     line-height: 3.6rem;
-
   }
 
   @media (max-width: 768px){
@@ -82,7 +81,7 @@ export const ButtonBack = styled.div`
 
 export const Content = styled.div`
   width: 100%;
-  min-height: 46.5rem;
+  min-height: 39rem;
 
   display: flex;
   align-items: center;
@@ -117,7 +116,9 @@ export const Content = styled.div`
 
   .details{
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
+    justify-content: center;
+
     gap: 2.4rem;
     width: 60.3rem;
     height: 35.6rem;
@@ -147,23 +148,26 @@ export const Content = styled.div`
   .Amount {
     display: flex;
     align-items: center;
+    margin-top: 2.4rem;
     gap: 1.4rem;
 
-    .PlusItem, .MinusItem{
+    font-size: 2rem;
+
+    .PlusItem, .MinusItem {
       display: flex;
-      align-items: center;
+      margin: 0;
+
       background: transparent;
       color: ${({theme})=> theme.COLORS.WHITE};
 
       > svg {
-      width: 2.4rem;
-      height: 2.4rem;
+        width: 2.4rem;
+        height: 2.4rem;
       }
     }
     
     > button {
-    margin-top: 2.4rem;
-    border: none;
+      border: none;
     }
   }
 
