@@ -37,17 +37,7 @@ export function Edit() {
   
   const [data, setData] = useState(null);
   
-  const imageURL = data && `${api.defaults.baseURL}/files/${data.image}`;
   const [image, setImage] = useState();
-  const [imageFile, setImageFile] = useState(null)
-
-  function handleChangeImage(event) {
-    const file = event.target.files[0];
-    setImageFile(file);
-
-    const imagePreview = URL.createObjectURL(file);
-    setImage(imagePreview);
-  }
 
   function handleAddIngredient() {
     if (newIngredient.length < 3) {
@@ -94,7 +84,7 @@ export function Edit() {
     setLoading(true);
 
     const formData = new FormData();
-    formData.append("image", imageFile);
+    formData.append("image", image);
     formData.append("title", title);
     formData.append("description", description);
     formData.append("category", category);
