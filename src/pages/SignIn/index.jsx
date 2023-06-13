@@ -15,13 +15,13 @@ export function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   
-  const { signIn, loading } = useAuth();
+  const { signIn } = useAuth();
   
-  const onFormSubmit = e => { e.preventDefault() }
-  
+  const onFormSubmit = e => { e.preventDefault() };
+
   function handleSignIn() {
     signIn({ email, password });
-  }
+  };
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -44,13 +44,13 @@ export function SignIn() {
               <p>Email</p>
               <Input placeholder="exemplo@email.com" type="text" onChange={e => setEmail(e.target.value)} />
             </div>
-            
+
             <div className="inputs">
               <p>Senha</p>
               <Input placeholder="Mínimo 6 caracteres" type="password" onChange={e => setPassword(e.target.value)} />
             </div>
 
-            <Button  type="submit" title={loading ? "Entrando" : "Entrar"} onClick={handleSignIn} disabled={loading} />
+            <Button  type="submit" title="Entrar" onClick={handleSignIn} />
 
             <Link to="/register">Criar uma conta</Link>
           </Form>
