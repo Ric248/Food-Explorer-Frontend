@@ -92,7 +92,7 @@ export const Logo = styled.div`
     gap: 1.9rem;
   }
 
-  svg {
+  img {
     height: 5rem;
     width: 5rem;
   }

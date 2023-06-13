@@ -1,5 +1,5 @@
 import { Container, Content, Logo } from "./styles";
-import logo_gray from '../../assets/logo_gray.svg'
+import logo_gray from '../../assets/icons/logo_gray.svg'
 
 export function Footer() {
   return (

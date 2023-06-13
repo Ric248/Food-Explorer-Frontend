@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 import { FiSearch, FiLogOut } from 'react-icons/fi';
 
-import logo from '../../assets/logo.svg';
-import receipt from '../../assets/Icons/Receipt.svg';
+import logo from '../../assets/icons/logo.svg';
+import receipt from '../../assets/icons/Receipt.svg';
 
 import { useCart } from '../../hooks/cart';
 

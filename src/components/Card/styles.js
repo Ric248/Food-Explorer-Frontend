@@ -45,7 +45,8 @@ export const Content = styled.div`
   }
 
   .container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
 
@@ -68,6 +69,7 @@ export const Content = styled.div`
   }
   
   .description {
+    width: 25.6rem;
     font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
