@@ -32,6 +32,10 @@ export const Content = styled.div`
     margin-top: 3.2rem;
   }
 
+  .disabledButton {
+    background: ${({ theme }) => theme.COLORS.PINK_BUTTON};
+  }
+
   @media only screen and (min-width: 768px) {
     .button {
       align-self: flex-end;

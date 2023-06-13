@@ -10,6 +10,7 @@ export default {
     WHITE_200: "#76797B",
     
     RED_BUTTON: "#750310",
+    PINK_BUTTON: "#AB4D55",
     BLUE_100: "#82F3FF",
     BLUE_200: "#001119",
     BLUE_300: "#192227",

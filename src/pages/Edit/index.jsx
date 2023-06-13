@@ -36,8 +36,9 @@ export function Edit() {
   const [newIngredient, setNewIngredient] = useState("");
   
   const [data, setData] = useState(null);
-  
   const [image, setImage] = useState();
+
+  const allowSave = image && title && ingredients.length > 0 && !newIngredient && category && price && description
 
   function handleAddIngredient() {
     if (newIngredient.length < 3) {
@@ -81,6 +82,7 @@ export function Edit() {
       return alert("Erro: Você não informou uma descrição para o prato!");
     }
 
+
     setLoading(true);
 
     const formData = new FormData();
@@ -90,9 +92,6 @@ export function Edit() {
     formData.append("category", category);
     formData.append("price", price);
     formData.append("ingredientString", ingredients);
-
-    console.log(ingredients); // --------------------------------------------------------------------------------------------------
-    console.log(formData); // ---------------------------------------------------------------------------------------------------
 
     await api
       .put(`/adminDishes/${params.id}`, formData)
@@ -244,11 +243,20 @@ export function Edit() {
               onClick={handleDeleteDish}
               disabled={loadingDelete} 
             />
-            <Button 
-              title={loading ? "Salvando alterações" : "Salvar alterações"}
-              onClick={handleUpdateDish}
-              disabled={loading} 
-            />
+            {
+              allowSave ?
+                <Button 
+                  title={loading ? "Salvando alterações" : "Salvar alterações"}
+                  onClick={handleUpdateDish}
+                  disabled={loading} 
+                />
+                :
+                <Button 
+                  className="disabledButton"
+                  title="Salvar alterações"
+                  onClick={handleUpdateDish}
+                />
+            }
           </div>
 
           </Content>

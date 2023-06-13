@@ -35,9 +35,12 @@ export const Content = styled.div`
   }
 
   .deleteButton {
-    background: ${({ theme }) => theme.COLORS.RED};
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
   }
-  
+
+  .disabledButton {
+    background: ${({ theme }) => theme.COLORS.PINK_BUTTON};
+  }
 
   @media only screen and (min-width: 768px) {
     .button {

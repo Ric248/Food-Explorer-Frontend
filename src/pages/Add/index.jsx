@@ -47,6 +47,8 @@ export function Add( ) {
   const [category, setCategory] = useState("");
   const [image, setImage] = useState(null);
 
+  const allowSave = image && title && ingredients.length > 0 && !newIngredient && category && price && description
+
   async function handleNewDish() {
     if (!image) {
       return alert("Erro: Você não inseriu uma imagem para o prato!");
@@ -202,11 +204,20 @@ export function Add( ) {
             </Form>
 
             <div className="button">
-              <Button 
-                title={loading ? "Salvando alterações" : "Salvar alterações"}
-                onClick={handleNewDish}
-                disabled={loading}
-              />
+              {
+              allowSave ?
+                <Button 
+                  title={loading ? "Salvando alterações" : "Salvar alterações"}
+                  onClick={handleNewDish}
+                  disabled={loading} 
+                />
+              :
+                <Button 
+                  className="disabledButton"
+                  title="Salvar alterações"
+                  onClick={handleNewDish}
+                />
+              }
             </div>
 
             </Content>
