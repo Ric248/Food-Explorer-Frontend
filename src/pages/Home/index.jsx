@@ -11,10 +11,10 @@ import { useFavorites } from '../../hooks/favorites';
 import background from "../../assets/banner.png"
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 
-import "swiper/css"; // XXX Mexer nisso? XXX
-import "swiper/css/navigation"; // XXX Mexer nisso? XXX
-import { Navigation } from "swiper"; // XXX Mexer nisso? XXX
+import "swiper/css";
+import "swiper/css/navigation";
 
 export function Home() {
   const [dishes, setDishes] = useState([])
@@ -85,12 +85,8 @@ export function Home() {
                 >
                   {
                     dishes.filter(dish => dish.category == "dishes").map((item, index) => (
-                      <SwiperSlide
-                        key={String(index)}
-                      >
-                        <Card 
-                          data={item}
-                        />
+                      <SwiperSlide key={String(index)}>
+                        <Card data={item} />
                       </SwiperSlide>
                     ))
                   }
@@ -129,12 +125,8 @@ export function Home() {
                 >
                   {
                     dishes.filter(dish => dish.category == "dessert").map(dish => (
-                      <SwiperSlide
-                        key={String(dish.id)}
-                      >
-                        <Card 
-                          data={dish}
-                        />
+                      <SwiperSlide key={String(dish.id)}>
+                        <Card data={dish} />
                       </SwiperSlide>
                     ))
                   }
@@ -174,12 +166,8 @@ export function Home() {
               
                   {
                     dishes.filter(dish => dish.category == "drinks").map(dish => (
-                      <SwiperSlide
-                        key={String(dish.id)}
-                      >
-                        <Card
-                          data={dish}
-                        />
+                      <SwiperSlide key={String(dish.id)}>
+                        <Card data={dish} />
                       </SwiperSlide>
                     ))
                   }
