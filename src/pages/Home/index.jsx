@@ -31,7 +31,7 @@ export function Home() {
 
   useEffect(() => {
     async function fetchDishes() {
-      const response = await api.get(`/adminDishes?title=${search}`);
+      const response = await api.get(`/dishes?title=${search}`);
       setDishes(response.data);
   }
   fetchDishes();
@@ -104,7 +104,7 @@ export function Home() {
                       </SwiperSlide>
                     ))
                   }
-                </Swiper>
+               </Swiper>
             }
 
             <p>Bebidas</p>

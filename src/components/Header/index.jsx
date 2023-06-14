@@ -10,19 +10,15 @@ import receipt from '../../assets/icons/Receipt.svg';
 
 import { useCart } from '../../hooks/cart';
 
-export function Header({search, favoritesFilter}) {
+export function Header({search}) {
   const { user } = useAuth()
   const { signOut } = useAuth();
 
-  const { cart, orders } = useCart();
-  
-  function mobileMenu() {
-    document.getElementById('hamburger').classList.toggle('active')
-    document.getElementById('nav-menu').classList.toggle('active')
-  }
+  const { cart } = useCart();
 
-  function userMenu() {
-    document.getElementById('user-menu').classList.toggle('active')
+  function mobileMenu() {
+    document.getElementById('hamburger').classList.toggle('active');
+    document.getElementById('nav-menu').classList.toggle('active');
   }
 
   return (
