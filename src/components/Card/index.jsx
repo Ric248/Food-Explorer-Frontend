@@ -13,6 +13,7 @@ import { useState } from "react";
 import { FiMinus, FiPlus } from 'react-icons/fi';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 
+import pencil from '../../assets/icons/Pencil.svg';
 import imagePlaceholder from '../../assets/image-not-found-icon.svg';
 
 export function Card({ data, ...rest }) {
@@ -51,7 +52,7 @@ export function Card({ data, ...rest }) {
           <Content>
             <button className="editButton">
               <Link to={`/edit/${data.id}`}>
-                  <img src="src/assets/Icons/Pencil.svg" alt="Símbolo de editar" />
+                <img src={pencil} alt="Símbolo de editar" />
               </Link>
             </button>
 

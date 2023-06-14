@@ -60,24 +60,11 @@ export function Home() {
                 <Swiper
                   grabCursor={true}
                   loop={true}
-                  loopFillGroupWithBlank={true}
                   breakpoints={{
-                    "@0.00": {
-                      slidesPerView: 1,
-                      spaceBetween: 10,
-                    },
-                    "@0.75": {
-                      slidesPerView: 2,
-                      spaceBetween: 20,
-                    },
-                    "@1.00": {
-                      slidesPerView: 3,
-                      spaceBetween: 40,
-                    },
-                    "@1.20": {
-                      slidesPerView: 4,
-                      spaceBetween: 160,
-                    },
+                    "@0.00": { slidesPerView: 1, spaceBetween: 10 },
+                    "@0.75": { slidesPerView: 2, spaceBetween: 20 },
+                    "@1.00": { slidesPerView: 3, spaceBetween: 40 },
+                    "@1.20": { slidesPerView: 4, spaceBetween: 160 }
                   }}
                   navigation={true}
                   modules={[Navigation]}
@@ -100,24 +87,11 @@ export function Home() {
                 <Swiper
                   grabCursor={true}
                   loop={true}
-                  loopFillGroupWithBlank={true}
                   breakpoints={{
-                    "@0.00": {
-                      slidesPerView: 1,
-                      spaceBetween: 10,
-                    },
-                    "@0.75": {
-                      slidesPerView: 2,
-                      spaceBetween: 20,
-                    },
-                    "@1.00": {
-                      slidesPerView: 3,
-                      spaceBetween: 40,
-                    },
-                    "@1.20": {
-                      slidesPerView: 4,
-                      spaceBetween: 160,
-                    },
+                    "@0.00": { slidesPerView: 1, spaceBetween: 10 },
+                    "@0.75": { slidesPerView: 2, spaceBetween: 20 },
+                    "@1.00": { slidesPerView: 3, spaceBetween: 40 },
+                    "@1.20": { slidesPerView: 4, spaceBetween: 160 }
                   }}
                   navigation={true}
                   modules={[Navigation]}
@@ -140,30 +114,16 @@ export function Home() {
                 <Swiper
                   grabCursor={true}
                   loop={true}
-                  loopFillGroupWithBlank={true}
                   breakpoints={{
-                    "@0.00": {
-                      slidesPerView: 1,
-                      spaceBetween: 10,
-                    },
-                    "@0.75": {
-                      slidesPerView: 2,
-                      spaceBetween: 20,
-                    },
-                    "@1.00": {
-                      slidesPerView: 3,
-                      spaceBetween: 40,
-                    },
-                    "@1.20": {
-                      slidesPerView: 4,
-                      spaceBetween: 160,
-                    },
+                    "@0.00": { slidesPerView: 1, spaceBetween: 10 },
+                    "@0.75": { slidesPerView: 2, spaceBetween: 20 },
+                    "@1.00": { slidesPerView: 3, spaceBetween: 40 },
+                    "@1.20": { slidesPerView: 4, spaceBetween: 160 }
                   }}
                   navigation={true}
                   modules={[Navigation]}
                   className="mySwiper"
                 >
-              
                   {
                     dishes.filter(dish => dish.category == "drinks").map(dish => (
                       <SwiperSlide key={String(dish.id)}>
