@@ -90,7 +90,7 @@ export function Add( ) {
     formData.append("ingredientString", ingredients);
 
     await api
-      .post("/adminDishes", formData)
+      .post("dishes", formData)
       .then(alert("Prato adicionado com sucesso!"), navigate("/"))
       .catch((error) => {
         if (error.response) {

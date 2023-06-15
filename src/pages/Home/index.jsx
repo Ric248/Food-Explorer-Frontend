@@ -31,7 +31,7 @@ export function Home() {
 
   useEffect(() => {
     async function fetchDishes() {
-      const response = await api.get(`/dishes?title=${search}`);
+      const response = await api.get(`/dishes?search=${search}`);
       setDishes(response.data);
   }
   fetchDishes();
@@ -43,7 +43,6 @@ export function Home() {
         <Content>
           <Banner>
             <img src={background} alt="Imagem de ingredientes" />
-            
             <div className="banner">
               <div className="title">
                 <h1>Sabores inigualáveis</h1>
