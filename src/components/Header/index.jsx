@@ -94,7 +94,6 @@ export function Header({search}) {
 
             <div className="signout-text">
               <span>Sair</span>
-              <hr />
             </div>
           </Logout>
         </div>

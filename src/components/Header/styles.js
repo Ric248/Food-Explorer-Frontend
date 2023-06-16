@@ -86,7 +86,13 @@ export const Content = styled.div`
 
     .signout-text {
       display: inline;
-      width: 100%;
+
+      margin-top: 2.4rem;
+
+      font-family: 'Poppins';
+      font-weight: 300;
+      font-size: 24px;
+      color: ${({ theme }) => theme.COLORS.WHITE_100};
     }
 
     .nav-menu {
@@ -96,7 +102,7 @@ export const Content = styled.div`
 
       position: fixed;
       left: -100%;
-      top: 10.4rem;
+      top: 9.6rem;
       z-index: 9999;
       
       width: 100%;
@@ -137,6 +143,10 @@ export const Content = styled.div`
       left: 0;
 
       > .header-button {
+        display: none;
+      }
+
+      .logo {
         display: none;
       }
     }
