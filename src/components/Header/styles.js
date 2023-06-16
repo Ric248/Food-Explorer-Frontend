@@ -114,6 +114,10 @@ export const Content = styled.div`
       
       background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
       box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
+
+      > .header-button {
+        display: none;
+      }
     }
 
     .mini-cart {
@@ -141,14 +145,6 @@ export const Content = styled.div`
 
     .nav-menu.active {
       left: 0;
-
-      > .header-button {
-        display: none;
-      }
-
-      .logo {
-        display: none;
-      }
     }
 
     .nav-item {
@@ -160,15 +156,15 @@ export const Content = styled.div`
       cursor: pointer;
     }
 
-    .hamburger.active .bar:nth-child(2) { // XXXX excluir XXX
+    .hamburger.active .bar:nth-child(2) { // XXXX excluir? XXX
       opacity: 0;
     }
 
-    .hamburger.active .bar:nth-child(1) { // XXXX excluir XXX
+    .hamburger.active .bar:nth-child(1) { // XXXX excluir? XXX
       transform: translateY(8px) rotate(45deg);
     }
 
-    .hamburger.active .bar:nth-child(3) { // XXXX excluir XXX
+    .hamburger.active .bar:nth-child(3) { // XXXX excluir? XXX
       transform: translateY(-8px) rotate(-45deg);
     }
   }
@@ -281,6 +277,8 @@ export const Logout = styled(Link)`
   
   > .signout-icon{
     svg {
+      margin-top: 0.5rem;
+
       color: ${({ theme }) => theme.COLORS.BLUE};
       font-size: 3.2rem;
     }

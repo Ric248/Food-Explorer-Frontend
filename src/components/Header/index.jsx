@@ -20,7 +20,7 @@ export function Header({search}) {
   function mobileMenu() {
     document.getElementById('hamburger').classList.toggle('active');
     document.getElementById('nav-menu').classList.toggle('active');
-    document.getElementById('mini_cart').classList.toggle('active');
+    document.getElementById('mini-cart').classList.toggle('active');
   }
 
   return (
@@ -53,7 +53,7 @@ export function Header({search}) {
           </div>
         </Logo>
 
-        <div className="mini-cart">
+        <div className="mini-cart" id="mini-cart">
           <img src={receipt} />
           <span>{cart.length}</span>
         </div>

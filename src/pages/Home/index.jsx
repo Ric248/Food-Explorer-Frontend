@@ -51,7 +51,7 @@ export function Home() {
             </div>
           </Banner>
 
-          <div className="cards">   
+          <div className="cards">
             <p>Refeições</p>
 
             {
