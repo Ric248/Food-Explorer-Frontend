@@ -45,6 +45,10 @@ export const Content = styled.div`
   padding: 0 4rem;
   gap: 3.2rem;
 
+  .signout-text {
+    display: none;
+  }
+
   .nav-menu {
     display: flex;
     justify-content: space-between;
@@ -57,7 +61,7 @@ export const Content = styled.div`
     display: none;
   }
 
-  .mini_cart {
+  .mini-cart {
     display: none;
   }
 
@@ -76,35 +80,45 @@ export const Content = styled.div`
   @media (max-width: 768px) {
     max-width: 768px;
 
+    .signout-icon {
+      display: none;
+    }
+
+    .signout-text {
+      display: inline;
+      width: 100%;
+    }
+
     .nav-menu {
       flex-direction: column;
-      align-items: center;
-      text-align: center;
-      
+      justify-content: start;
+      align-items: start;
+
       position: fixed;
       left: -100%;
       top: 10.4rem;
       z-index: 9999;
       
       width: 100%;
-      height: 35rem;
+      height: 100%;
       gap: 2rem;
-      padding: 5rem 5rem 3rem;
-      border-radius: 0 0 2rem 2rem;
-      border: 1px solid ${({ theme }) => theme.COLORS.BLUE};
-      
+      padding: 3.6rem 5rem;
+
       transition: 0.3s;
       
-      background-color: ${({ theme }) => theme.COLORS.WHITE};
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
       box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
-    .mini_cart {
+    .mini-cart {
+      position: relative;
       display: block;
 
       > span {
         position: absolute;
         align-self: start;
+        right: -5px;
+        top: -4px;
 
         width: 2rem;
         height: 2rem;
@@ -121,6 +135,10 @@ export const Content = styled.div`
 
     .nav-menu.active {
       left: 0;
+
+      > .header-button {
+        display: none;
+      }
     }
 
     .nav-item {
@@ -246,18 +264,20 @@ export const Button = styled.button`
 
 export const Logout = styled(Link)`
   display: flex;
-  align-self: center;
+  align-self: start;
   
   border: none;
   background: none;
   
-  > svg {
-    color: ${({ theme }) => theme.COLORS.BLUE};
-    font-size: 3.2rem;
-  }
+  > .signout-icon{
+    svg {
+      color: ${({ theme }) => theme.COLORS.BLUE};
+      font-size: 3.2rem;
+    }
 
-  > svg:hover {
-    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    svg:hover {
+      animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
   }
 `;
 

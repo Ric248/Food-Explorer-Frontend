@@ -35,27 +35,25 @@ export function Header({search}) {
 
         <Logo>
           <div className="logo">
-              {
-              user.isAdmin ?
-                (
-                  <Link to="/">
-                    <img src={logo} alt="" />
-                    <div>
-                      <h1>food explorer</h1>
-                      <p>admin</p>
-                    </div>
-                  </Link>
-                ):(
-                  <Link to="/">
-                    <img src={logo} alt="" />
-                    <h1>food explorer</h1>
-                  </Link>
-                )
-              }
+            {
+            user.isAdmin ?
+              <Link to="/">
+                <img src={logo} alt="" />
+                <div>
+                  <h1>food explorer</h1>
+                  <p>admin</p>
+                </div>
+              </Link>
+            :
+              <Link to="/">
+                <img src={logo} alt="" />
+                <h1>food explorer</h1>
+              </Link>
+            }
           </div>
         </Logo>
 
-        <div className="mini_cart">
+        <div className="mini-cart">
           <img src={receipt} />
           <span>{cart.length}</span>
         </div>
@@ -71,24 +69,33 @@ export function Header({search}) {
 
           {
             user.isAdmin ?
-              (
+              <div className="header-button">
                 <Link to="/add">
                   <Button type='button'>
                     Novo Prato
                   </Button>
                 </Link>
-              ): (
+              </div>
+              :
+              <div className="header-button">
                 <Link to="/cart">
                   <Button type='button'>
                     <img src={receipt} />
                     Pedidos <span>({cart.length})</span>
                   </Button>
                 </Link>
-              )
+              </div>
           }
 
           <Logout to="/" onClick={signOut}>
-            <FiLogOut />
+            <div className="signout-icon">
+              <FiLogOut />
+            </div>
+
+            <div className="signout-text">
+              <span>Sair</span>
+              <hr />
+            </div>
           </Logout>
         </div>
 
