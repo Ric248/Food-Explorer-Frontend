@@ -6,11 +6,10 @@ export const Container = styled.div`
 
   max-width: 110.6rem;
   height: 100vh;
-  
+
   margin: auto;
   padding: 14.2rem 4rem;
-  
-  justify-content: space-between;
+
   align-items: center;
 
   animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
@@ -28,8 +27,11 @@ export const Container = styled.div`
     }
   }
 
-  @media only screen and (min-width: 768px) {
+  @media (min-width: 768px) {
     flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0;
   }
 `;
 
@@ -45,16 +47,10 @@ export const Form = styled.div`
   padding: 6.4rem;
   border-radius: 1.6rem;
 
-  background-color: ${({ theme }) => theme.COLORS.BLUE_200};
+  background-color: transparent;
 
   > h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 3.2rem;
-    font-weight: 500;
-    line-height: 6.8rem;
-    text-align: center;
-    
-    margin-bottom: 3.2rem;
+    display: none;
   }
 
   > a {
@@ -73,13 +69,28 @@ export const Form = styled.div`
     margin-bottom: 0.8rem;
     color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
+
+  @media (min-width: 768px) {
+    background-color: ${({ theme }) => theme.COLORS.BLUE_200};
+
+    > h2 {
+      display: flex;
+
+      font-family: 'Poppins', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 500;
+      line-height: 6.8rem;
+      text-align: center;
+
+      margin-bottom: 3.2rem;
+    }
+  }
 `;
 
 export const Logo = styled.div`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.COLORS.BLUE};
-  margin-bottom: 4rem;
 
   h1 {
     font-size: clamp(3rem, 3rem + 1.5vw, 4.248rem);
@@ -94,5 +105,9 @@ export const Logo = styled.div`
   img {
     height: 5rem;
     width: 5rem;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 4rem;
   }
 `;

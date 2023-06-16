@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import { FiSearch, FiLogOut } from 'react-icons/fi';
 
 import logo from '../../assets/icons/logo.svg';
-import receipt from '../../assets/icons/Receipt.svg';
+import receipt from '../../assets/icons/receipt.svg';
+import bar from '../../assets/icons/bar.svg';
 
 import { useCart } from '../../hooks/cart';
 
@@ -19,11 +20,19 @@ export function Header({search}) {
   function mobileMenu() {
     document.getElementById('hamburger').classList.toggle('active');
     document.getElementById('nav-menu').classList.toggle('active');
+    document.getElementById('mini_cart').classList.toggle('active');
   }
 
   return (
     <Container>
       <Content>
+
+        <div className="hamburger" id="hamburger" onClick={mobileMenu}>
+          <img className="bar" src={bar} />
+          <img className="bar" src={bar} />
+          <img className="bar" src={bar} />
+        </div>
+
         <Logo>
           <div className="logo">
               {
@@ -46,10 +55,9 @@ export function Header({search}) {
           </div>
         </Logo>
 
-        <div className="hamburger" id="hamburger" onClick={mobileMenu}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+        <div className="mini_cart">
+          <img src={receipt} />
+          <span>{cart.length}</span>
         </div>
 
         <div className="nav-menu" id="nav-menu">

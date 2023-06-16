@@ -25,23 +25,11 @@ export const Container = styled.header`
   @keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
-        transform: rotate(0);
+    transform: rotate(0);
   }
   100% {
     -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-  }}
-  
-  @keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
+    transform: rotate(360deg);
   }}
 `;
 
@@ -69,6 +57,10 @@ export const Content = styled.div`
     display: none;
   }
 
+  .mini_cart {
+    display: none;
+  }
+
   .bar {
     display: block;
     
@@ -78,10 +70,10 @@ export const Content = styled.div`
     
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: ${({ theme }) => theme.COLORS.BLUE};
+    background-color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     max-width: 768px;
 
     .nav-menu {
@@ -103,9 +95,28 @@ export const Content = styled.div`
       
       transition: 0.3s;
       
-      background-color: ${({ theme }) => theme.COLORS.BLUE_200};
-      box-shadow:
-        0 10px 27px rgba(0, 0, 0, 0.05);
+      background-color: ${({ theme }) => theme.COLORS.WHITE};
+      box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .mini_cart {
+      display: block;
+
+      > span {
+        position: absolute;
+        align-self: start;
+
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 1.4rem;
+
+        background-color: ${({ theme }) => theme.COLORS.RED_BUTTON};
+      }
     }
 
     .nav-menu.active {
@@ -121,15 +132,15 @@ export const Content = styled.div`
       cursor: pointer;
     }
 
-    .hamburger.active .bar:nth-child(2) {
+    .hamburger.active .bar:nth-child(2) { // XXXX excluir XXX
       opacity: 0;
     }
 
-    .hamburger.active .bar:nth-child(1) {
+    .hamburger.active .bar:nth-child(1) { // XXXX excluir XXX
       transform: translateY(8px) rotate(45deg);
     }
 
-    .hamburger.active .bar:nth-child(3) {
+    .hamburger.active .bar:nth-child(3) { // XXXX excluir XXX
       transform: translateY(-8px) rotate(-45deg);
     }
   }
