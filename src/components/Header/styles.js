@@ -65,13 +65,17 @@ export const Content = styled.div`
     display: none;
   }
 
+  .text-add {
+    display: none;
+  }
+
   .bar {
     display: block;
-    
+
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    
+
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: ${({ theme }) => theme.COLORS.WHITE};
@@ -87,12 +91,14 @@ export const Content = styled.div`
     .signout-text {
       display: inline;
 
-      margin-top: 2.4rem;
+      padding-bottom: 0.9rem;
 
       font-family: 'Poppins';
       font-weight: 300;
       font-size: 24px;
       color: ${({ theme }) => theme.COLORS.WHITE_100};
+
+      border-bottom: 1px solid ${({ theme }) => theme.COLORS.BLUE_300};
     }
 
     .nav-menu {
@@ -113,9 +119,8 @@ export const Content = styled.div`
       transition: 0.3s;
       
       background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-      box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
 
-      > .header-button {
+      .main-button {
         display: none;
       }
     }
@@ -149,6 +154,19 @@ export const Content = styled.div`
 
     .nav-item {
       margin: 2.5rem 0;
+    }
+
+    .text-add {
+      display: inline;
+
+      padding-bottom: 0.9rem;
+
+      font-family: 'Poppins';
+      font-weight: 300;
+      font-size: 24px;
+      color: ${({ theme }) => theme.COLORS.WHITE_100};
+
+      border-bottom: 1px solid ${({ theme }) => theme.COLORS.BLUE_300};
     }
 
     .hamburger {
