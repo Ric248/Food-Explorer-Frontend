@@ -61,6 +61,10 @@ export const Content = styled.div`
     display: none;
   }
 
+  .close-nav{
+    display: none;
+  }
+
   .mini-cart {
     display: none;
   }
@@ -101,13 +105,21 @@ export const Content = styled.div`
       border-bottom: 1px solid ${({ theme }) => theme.COLORS.BLUE_300};
     }
 
+    .close-nav{
+      display: block;
+
+      > img {
+        cursor: pointer;
+      }
+    }
+
     .nav-menu {
       flex-direction: column;
       justify-content: start;
       align-items: start;
 
       position: fixed;
-      left: -100%;
+      left: 100%;
       top: 9.6rem;
       z-index: 9999;
       
@@ -173,18 +185,6 @@ export const Content = styled.div`
       display: block;
       cursor: pointer;
     }
-
-    .hamburger.active .bar:nth-child(2) { // XXXX excluir? XXX
-      opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) { // XXXX excluir? XXX
-      transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) { // XXXX excluir? XXX
-      transform: translateY(-8px) rotate(-45deg);
-    }
   }
 `;
 
@@ -194,10 +194,8 @@ export const Logo = styled.div`
   color: ${({ theme }) => theme.COLORS.BLUE};
   
   h1 {
-    font-size: 2.51109rem;
-    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    font-size: 2.5rem;
   }
-  
 
   .logo p {
     font-size: 1.2rem;

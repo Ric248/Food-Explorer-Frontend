@@ -8,6 +8,7 @@ import { FiSearch, FiLogOut } from 'react-icons/fi';
 import logo from '../../assets/icons/logo.svg';
 import receipt from '../../assets/icons/receipt.svg';
 import bar from '../../assets/icons/bar.svg';
+import close from '../../assets/icons/close.svg';
 
 import { useCart } from '../../hooks/cart';
 
@@ -21,6 +22,7 @@ export function Header({search}) {
     document.getElementById('hamburger').classList.toggle('active');
     document.getElementById('nav-menu').classList.toggle('active');
     document.getElementById('mini-cart').classList.toggle('active');
+    document.getElementById('close-nav').classList.toggle('active');
   }
 
   return (
@@ -64,6 +66,11 @@ export function Header({search}) {
         }
 
         <div className="nav-menu" id="nav-menu">
+
+          <div className="close-nav" onClick={mobileMenu}>
+            <img src={close} />
+            <span>Menu</span>
+          </div>
 
           <Search>
             <label>
