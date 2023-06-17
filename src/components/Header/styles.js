@@ -7,6 +7,7 @@ export const Container = styled.header`
   width: 100%;
   
   position: sticky;
+
   top: 0;
   z-index: 999;
   
@@ -87,6 +88,8 @@ export const Content = styled.div`
 
   @media (max-width: 768px) {
     max-width: 768px;
+    height: 11.4rem;
+    padding-top: 1.8rem;
 
     .signout-icon {
       display: none;
@@ -95,6 +98,7 @@ export const Content = styled.div`
     .signout-text {
       display: inline;
 
+      margin: 0 3.6rem;
       padding-bottom: 0.9rem;
 
       font-family: 'Poppins';
@@ -108,7 +112,20 @@ export const Content = styled.div`
     .close-nav{
       display: block;
 
+      height: 11.4rem;
+      width: 100%;
+      padding-top: 5.9rem;
+      padding-left: 3.6rem;
+      gap: 1.6rem;
+
+      font-family: 'Roboto', sans-serif;
+      font-size: 2.1rem;
+      font-weight: 400;
+
+      background-color: ${({ theme }) => theme.COLORS.BLUE_200};
+
       > img {
+        margin-right: 1.6rem;
         cursor: pointer;
       }
     }
@@ -120,13 +137,12 @@ export const Content = styled.div`
 
       position: fixed;
       left: 100%;
-      top: 9.6rem;
+      top: 0;
       z-index: 9999;
       
-      width: 100%;
+      width: 100vw;
       height: 100%;
       gap: 2rem;
-      padding: 3.6rem 5rem;
 
       transition: 0.3s;
       
@@ -171,6 +187,7 @@ export const Content = styled.div`
     .text-add {
       display: inline;
 
+      margin: 0 3.6rem;
       padding-bottom: 0.9rem;
 
       font-family: 'Poppins';
@@ -223,7 +240,8 @@ export const Search = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 100%;
+  width: 87.5%;
+  margin: 0 3.6rem;
   border-radius: 5px;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
