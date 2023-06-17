@@ -95,20 +95,24 @@ export const Banner = styled.div`
     display: flex;
     justify-content: end;
 
+    height: clamp(4rem, 21.4vw, 26rem);
+
     background: linear-gradient(180deg, ${({ theme }) => theme.COLORS.BLUE_400} 0%, ${({ theme }) => theme.COLORS.BLUE_500} 100%);
     border-radius: 0.8rem;
     position: relative;
   }
 
   .title {
-    padding: 8.7rem 4.6rem 0 0;
+    //padding: 8.7rem 4.6rem 0 0;
+    margin-top: clamp(1rem, 6.4vw, 8.8rem);
+    padding-left: clamp(1rem, 9vw, 8.7rem);
     margin-right: 3vw;
-    gap: 0.8rem;
+    gap: clamp(0, 0.1vw, 0.8rem);
 
-    width: 54rem;
+    width: clamp(1rem, 56vw, 54rem);
     height: 26rem;
 
-    text-align: right;
+    text-align: left;
   }
 
   img {
@@ -122,14 +126,13 @@ export const Banner = styled.div`
   }
 
   h1 {
-    line-height: 140%;
     font-size: clamp(1rem, 3.5vw, 4rem);
     font-weight: 500;
   }
 
   span {
     font-family: 'Roboto', sans-serif;
-    font-size: clamp(1rem, 1.5vw, 1.6rem);
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
     font-weight: 400;
   }
 `;

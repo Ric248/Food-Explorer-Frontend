@@ -44,7 +44,7 @@ export const Content = styled.div`
   height: 9.6rem;
   
   padding: 0 4rem;
-  gap: 3.2rem;
+  gap: clamp(0.4rem, 1vw, 3.2rem);
 
   .signout-text {
     display: none;
@@ -55,7 +55,7 @@ export const Content = styled.div`
     justify-content: space-between;
     
     width: 100%;
-    gap: 3.2rem;
+    gap: clamp(0.4rem, 1vw, 3.2rem);
   }
 
   .hamburger {
@@ -98,7 +98,7 @@ export const Content = styled.div`
     .signout-text {
       display: inline;
 
-      margin: 0 3.6rem;
+      margin: 0 4.6rem;
       padding-bottom: 0.9rem;
 
       font-family: 'Poppins';
@@ -271,6 +271,9 @@ export const Search = styled.div`
 
   svg {
     color: ${({ theme }) => theme.COLORS.GRAY_200};
+  }
+  @media (max-width: 1000px) {
+    margin: 0;
   }
 `;
 
