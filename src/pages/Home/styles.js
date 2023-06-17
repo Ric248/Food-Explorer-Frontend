@@ -28,7 +28,7 @@ export const Content = styled.div`
   }
 
   p {
-    font-size: 3.2rem;
+    font-size: clamp(0.4rem, 6.4vw, 3.2rem);
     margin-bottom: 3rem;
   }
   
@@ -88,8 +88,8 @@ export const Banner = styled.div`
   justify-content: space-between;
   font-family: 'Poppins', sans-serif;
 
-  margin-bottom: 6.2rem;
-  margin-top: 16.4rem;
+  margin-bottom: clamp(1rem, 10.2vw, 6.2rem);
+  margin-top: clamp(1rem, 16.4vw, 16.4rem);
 
   .banner {
     display: flex;
@@ -104,10 +104,10 @@ export const Banner = styled.div`
 
   .title {
     //padding: 8.7rem 4.6rem 0 0;
-    margin-top: clamp(1rem, 6.4vw, 8.8rem);
-    padding-left: clamp(1rem, 9vw, 8.7rem);
+    margin-top: clamp(1rem, 6.2vw, 8.8rem);
+    padding-left: clamp(1rem, 10vw, 8.7rem);
     margin-right: 3vw;
-    gap: clamp(0, 0.1vw, 0.8rem);
+    gap: 0.8rem;
 
     width: clamp(1rem, 56vw, 54rem);
     height: 26rem;
@@ -134,5 +134,17 @@ export const Banner = styled.div`
     font-family: 'Roboto', sans-serif;
     font-size: clamp(1rem, 2.5vw, 1.6rem);
     font-weight: 400;
+  }
+
+  @media (max-width: 600px) {
+    span {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1rem, 2.5vw, 1.6rem);
+      font-weight: 400;
+    }
+
+    .title {
+      line-height: 120%;
+    }
   }
 `;
