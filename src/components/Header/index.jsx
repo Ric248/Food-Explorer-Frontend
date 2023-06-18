@@ -57,12 +57,16 @@ export function Header({search}) {
 
         {
           user.isAdmin ?
-            <div className="mini-cart" id="mini-cart"></div>
+            <Link to="/cart">
+              <div className="mini-cart" id="mini-cart"></div>
+            </Link>
           :
-            <div className="mini-cart" id="mini-cart">
-              <img src={receipt} />
-              <span>{cart.length}</span>
-            </div>
+            <Link to="/cart">
+              <div className="mini-cart" id="mini-cart">
+                <img src={receipt} />
+                <span>{cart.length}</span>
+              </div>
+            </Link>
         }
 
         <div className="nav-menu" id="nav-menu">
