@@ -57,16 +57,12 @@ export function Header({search}) {
 
         {
           user.isAdmin ?
-            <Link to="/cart">
-              <div className="mini-cart" id="mini-cart"></div>
-            </Link>
+            <div className="mini-cart" id="mini-cart"></div>
           :
-            <Link to="/cart">
-              <div className="mini-cart" id="mini-cart">
-                <img src={receipt} />
-                <span>{cart.length}</span>
-              </div>
-            </Link>
+            <div className="mini-cart" id="mini-cart">
+              <img src={receipt} />
+              <span>{cart.length}</span>
+            </div>
         }
 
         <div className="nav-menu" id="nav-menu">
@@ -99,14 +95,12 @@ export function Header({search}) {
               </div>
               :
               <div className="header-button">
-                <Link to="/cart">
-                  <div className="main-button">
-                    <Button type='button'>
-                      <img src={receipt} />
-                      Pedidos <span>({cart.length})</span>
-                    </Button>
-                  </div>
-                </Link>
+                <div className="main-button">
+                  <Button type='button'>
+                    <img src={receipt} />
+                    Pedidos <span>({cart.length})</span>
+                  </Button>
+                </div>
               </div>
           }
 

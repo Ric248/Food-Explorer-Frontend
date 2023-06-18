@@ -1,3 +1,3 @@
 import axios from 'axios';
 
-export const api = axios.create({ baseURL: "http://localhost:3333" }); // XXX colocar o endereço web? XXX
+export const api = axios.create({ baseURL: "https://food-explorer-backend-zd8f.onrender.com" });

@@ -157,6 +157,8 @@ export const Content = styled.div`
       position: relative;
       display: block;
 
+      cursor: pointer;
+
       > span {
         position: absolute;
         align-self: start;
