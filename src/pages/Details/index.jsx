@@ -54,57 +54,55 @@ export function Details(){
       {
       data &&
       <Main>
+        <ButtonBack>
+          <Link to="/">
+            <ButtonText title="voltar" icon={RiArrowLeftSLine}/>
+          </Link>
+        </ButtonBack>
 
-      <ButtonBack>
-        <Link to="/">
-          <ButtonText title="voltar" icon={RiArrowLeftSLine}/>
-        </Link>
-      </ButtonBack>
+        <Content>
+          <img src={imageURL} alt="Imagem do prato" />
 
-      <Content>
-        <img src={imageURL} alt="Imagem do prato" />
-
-        <div className='details'>
-          <div className='details-wrapper'>
-            <h2>{data.title}</h2>
-            <p>{data.description}</p>
-          </div>
-
-          <div className="ingredientsTags">
-            {
-            data.ingredients.map ((ingredient) => (<div className="tag">{ingredient.name}</div>))
-            }
-          </div>
-
-          <div className='AmountItemsAndBuy-wrapper'>
-            {
-            user.isAdmin ?
-
-            <div className='Amount'>
-              <Button title="Editar prato" onClick={handleGoToEditPage} />
+          <div className='details'>
+            <div className='details-wrapper'>
+              <h2>{data.title}</h2>
+              <p>{data.description}</p>
             </div>
 
-            :
-
-            <div className='Amount'>
-              <button className='MinusItem' onClick={handleRemoveItem}>
-                <BiMinus />
-              </button>
-
-              <span>0{quantity}</span>
-            
-              <button className='PlusItem' onClick={handleAddItem}>
-                <BiPlus />
-              </button>
-
-              <Button title={`incluir ∙ R$ ${data.price}`}/>
+            <div className="ingredientsTags">
+              {
+              data.ingredients.map ((ingredient) => (<div className="tag">{ingredient.name}</div>))
+              }
             </div>
-            }
 
+            <div className='AmountItemsAndBuy-wrapper'>
+              {
+              user.isAdmin ?
+
+              <div className='Amount'>
+                <Button title="Editar prato" onClick={handleGoToEditPage} />
+              </div>
+
+              :
+
+              <div className='Amount'>
+                <button className='MinusItem' onClick={handleRemoveItem}>
+                  <BiMinus />
+                </button>
+
+                <span>0{quantity}</span>
+              
+                <button className='PlusItem' onClick={handleAddItem}>
+                  <BiPlus />
+                </button>
+
+                <Button title={`incluir ∙ R$ ${data.price}`}/>
+              </div>
+              }
+
+            </div>
           </div>
-        </div>
-      </Content>
-
+        </Content>
       </Main>
       }
 
