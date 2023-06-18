@@ -57,7 +57,7 @@ export const Form = styled.div`
     margin-top: 3.2rem;
     
     text-align: center;
-    color: ${({ theme }) => theme.COLORS.BLUE};
+    color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
   > .inputs {
@@ -90,7 +90,7 @@ export const Form = styled.div`
 export const Logo = styled.div`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.COLORS.BLUE};
+  color: ${({ theme }) => theme.COLORS.WHITE};
 
   h1 {
     font-size: clamp(3rem, 3rem + 1.5vw, 4.248rem);

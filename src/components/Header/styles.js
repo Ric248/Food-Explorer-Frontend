@@ -208,7 +208,7 @@ export const Content = styled.div`
 export const Logo = styled.div`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.COLORS.BLUE};
+  color: ${({ theme }) => theme.COLORS.WHITE};
   
   h1 {
     font-size: 2.5rem;
@@ -335,7 +335,7 @@ export const Logout = styled(Link)`
     svg {
       margin-top: 0.5rem;
 
-      color: ${({ theme }) => theme.COLORS.BLUE};
+      color: ${({ theme }) => theme.COLORS.WHITE};
       font-size: 3.2rem;
     }
 

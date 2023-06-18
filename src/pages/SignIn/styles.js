@@ -43,7 +43,7 @@ export const Form = styled.form`
   
   max-width: 47.6rem;
   width: 100%;
-  
+
   padding: 6.4rem;
   border-radius: 1.6rem;
 
@@ -57,7 +57,7 @@ export const Form = styled.form`
     margin-top: 3.2rem;
 
     text-align: center;
-    color: ${({ theme }) => theme.COLORS.BLUE};
+    color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
   > .inputs {
@@ -92,7 +92,7 @@ export const Form = styled.form`
 export const Logo = styled.div`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.COLORS.BLUE};
+  color: ${({ theme }) => theme.COLORS.WHITE};
 
   h1 {
     font-size: clamp(3rem, 3rem + 1.5vw, 4.248rem);

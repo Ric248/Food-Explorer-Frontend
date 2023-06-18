@@ -133,7 +133,7 @@ export const Form = styled.form`
     }
 
     > label:hover {
-      background-color: ${({ theme }) => theme.COLORS.BLUE};
+      background-color: ${({ theme }) => theme.COLORS.WHITE};
     }
   }
 

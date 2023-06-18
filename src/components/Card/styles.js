@@ -113,7 +113,7 @@ export const PurchaseCard = styled.div`
   p {
     font-weight: 700;
     line-height: 160%;
-    color: ${({ theme }) => theme.COLORS.BLUE};
+    color: ${({ theme }) => theme.COLORS.WHITE};
     text-align: center;
   }
 `;
