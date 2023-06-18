@@ -230,6 +230,8 @@ export const Form = styled.form`
     
     border-radius: 0.8rem;
     margin-bottom: 3.2rem;
+
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
   }
 
   .ingredientsTag { 
@@ -284,6 +286,38 @@ export const Form = styled.form`
     .price {
       max-width: 25.1rem;
       width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .details {
+      display: flex;
+      flex-direction: column;
+
+      .dishImage {
+        width: 100%;
+      }
+
+      .dish {
+        width: 100%;
+      }
+
+      .dishCategory {
+        width: 100%;
+      }
+    }
+  
+    .details_plus {
+      display: flex;
+      flex-direction: column;
+
+      .ingredients {
+        margin: 0;
+      }
+
+      .price {
+        max-width: 100%;
+      }
     }
   }
 `;

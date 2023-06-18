@@ -187,7 +187,7 @@ export const Content = styled.div`
     .text-add {
       display: inline;
 
-      margin: 0 3.6rem;
+      margin: 0 4.6rem;
       padding-bottom: 0.9rem;
 
       font-family: 'Poppins';
@@ -240,7 +240,7 @@ export const Search = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 87.5%;
+  width: 85%;
   margin: 0 3.6rem;
   border-radius: 5px;
 
@@ -271,9 +271,6 @@ export const Search = styled.div`
 
   svg {
     color: ${({ theme }) => theme.COLORS.GRAY_200};
-  }
-  @media (max-width: 1000px) {
-    margin: 0;
   }
 `;
 

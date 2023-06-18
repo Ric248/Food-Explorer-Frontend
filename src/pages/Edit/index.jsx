@@ -217,7 +217,7 @@ export function Edit() {
                   <p>Preço</p>
                   <Input
                     placeholder="R$ 00,00"
-                    type="number"
+                    type="text"
                     value={price} 
                     onChange={e => setPrice(e.target.value)}
                   />
