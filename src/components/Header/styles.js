@@ -233,6 +233,14 @@ export const Logo = styled.div`
     text-decoration: none;
     color: inherit;
   }
+
+  @media (max-width: 768px) {
+    .logo p {
+      font-size: 1.2rem;
+      margin-top: -2.8rem;
+      margin-right: -5rem;
+    }
+  }
 `;
 
 export const Search = styled.div`
@@ -240,7 +248,7 @@ export const Search = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 85%;
+  width: 100%;
   margin: 0 3.6rem;
   border-radius: 5px;
 
@@ -271,6 +279,20 @@ export const Search = styled.div`
 
   svg {
     color: ${({ theme }) => theme.COLORS.GRAY_200};
+  }
+
+  @media (max-width: 1000px) {
+    margin: 0;
+    width: 75%;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 3.6rem;
+    width: 85%;
+
+    input {
+      width: 100%;
+    }
   }
 `;
 

@@ -57,7 +57,7 @@ export function Header({search}) {
 
         {
           user.isAdmin ?
-            <div></div>
+            <div className="mini-cart" id="mini-cart"></div>
           :
             <div className="mini-cart" id="mini-cart">
               <img src={receipt} />
@@ -67,7 +67,7 @@ export function Header({search}) {
 
         <div className="nav-menu" id="nav-menu">
 
-          <div className="close-nav" onClick={mobileMenu}>
+          <div className="close-nav" id="close-nav" onClick={mobileMenu}>
             <img src={close} />
             <span>Menu</span>
           </div>
