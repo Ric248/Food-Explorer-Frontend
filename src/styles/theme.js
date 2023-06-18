@@ -6,7 +6,7 @@ export default {
     BACKGROUND_600: "hsla(200, 100%, 5%, 1)",
 
     WHITE: "#FFFFFF",
-    WHITE_100: "#E1E1E6", // XXX mudar o nome XXX
+    WHITE_100: "#E1E1E6",
     WHITE_200: "#76797B",
     
     RED_BUTTON: "#750310",
@@ -23,7 +23,7 @@ export default {
     GRAY_400: "rgba(255, 255, 255, 0.05)",
 
     RED: "#FF002E",
-    BLACK: "#0D0C0F", // XXX mudar o nome XXX -> Black_100
-    FULL_BLACK: "#000000" // XXX mudar o nome XXX -> Black
+    BLACK: "#0D0C0F",
+    FULL_BLACK: "#000000"
   }
 }

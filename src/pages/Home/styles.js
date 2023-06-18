@@ -33,7 +33,6 @@ export const Content = styled.div`
   }
   
   .swiper-slide {
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -103,7 +102,6 @@ export const Banner = styled.div`
   }
 
   .title {
-    //padding: 8.7rem 4.6rem 0 0;
     margin-top: clamp(1rem, 6.2vw, 8.8rem);
     padding-left: clamp(1rem, 10vw, 8.7rem);
     margin-right: 3vw;
