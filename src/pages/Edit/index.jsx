@@ -94,7 +94,7 @@ export function Edit() {
     formData.append("ingredientString", ingredients);
 
     await api
-      .put(`/adminDishes/${params.id}`, formData)
+      .put(`/dishes/${params.id}`, formData)
       .then(alert("Prato atualizado com sucesso!"), navigate("/"))
       .catch((error) => {
         if (error.response) {
@@ -109,7 +109,7 @@ export function Edit() {
 
   useEffect(() => {
     async function fetchDish() {
-      const response = await api.get(`/adminDishes/${params.id}`);
+      const response = await api.get(`/dishes/${params.id}`);
       setData(response.data);
       
       const { title, description, category, price, ingredients } = response.data;
@@ -127,7 +127,7 @@ export function Edit() {
     const confirm = window.confirm("Deseja realmente deletar o prato do cardápio?")
 
     if(confirm){
-      await api.delete(`/adminDishes/${data.id}`)
+      await api.delete(`/dishes/${data.id}`)
       navigate(-1)
     }
   }

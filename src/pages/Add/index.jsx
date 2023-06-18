@@ -184,7 +184,7 @@ export function Add( ) {
                   <p>Preço</p>
                   <Input
                     placeholder="R$ 00,00"
-                    type="number"
+                    type="text"
                     onChange={e => setPrice(e.target.value)}
                   />
                 </div>
